@@ -30,7 +30,8 @@ spec:
     spec:
       containers:
         - name: tracking-dashboard
-          image: sebsgo/tracking-dashboard:1.0 # Imagen que construiste localmente
+          image: tracking-dashboard:latest
+          imagePullPolicy: Never # Usar la imagen local de minikube/Docker.
           ports:
             - containerPort: 9000
           env:
